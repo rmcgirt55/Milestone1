@@ -18,5 +18,7 @@
 - Three lines cleared = 500 points
 - Four lines cleared = 800 points
 - 1 point for each tile moved down
-- 2 points * distance moved with hard drop
+- 2 points distance moved with hard drop by prushing up arrow
+  game gets faster as you clear rows
+  do not let the blocks touch the top of the board
 
