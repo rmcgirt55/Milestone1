@@ -2,7 +2,7 @@ class Piece  {
     constructor(shape, ctx) {
         this.shape = shape;
         this.ctx = ctx;
-        
+        // x and y are upper left of shape array
         this.x = COLS / 2 - Math.floor(this.shape.length / 2);
         this.y = this.shape.length == 4? -2 : this.shape.length * -1;
     }
