@@ -72,7 +72,7 @@ class Main {
             }
             
 
-        
+            // wait gamespeed for next move
             await sleep(this.game.getSpeed());
 
         }
@@ -80,6 +80,7 @@ class Main {
         this.showGameOver();
     }
     
+    // show methods
 
     showPause() {
         let ctx = this.mainCtx;
@@ -113,57 +114,60 @@ class Main {
     }
 
     showMenuGrid(shape, ctx) {
-        
+        // draw bg
         drawRect(ctx, 0, 0, 180, 180, COLORS[0]);
 
-       
+        // exit for null shape
         if (shape == null) return;
 
-        
+        // shallow copy shape
         let dispShape = shape.map( row => row.map( x => x ) );
         let x, y;
 
-        
+        // set coords
         switch(dispShape.length) {
-            
+            // I shape
             case 4:
-                
+                // check for roation orientation to disp correctly
+                // horizontal
                 if (dispShape[0][0] == 0 && dispShape[0][1] == 0 && dispShape[0][2] == 0 && dispShape[0][3] == 0) {
                     x =  10;
-                    y = dispShape[1][0] != 0 ? 30 : -10; 
+                    y = dispShape[1][0] != 0 ? 30 : -10; // check for upper or lower of center
+                // vertical
                 } else {
-                    x = dispShape[0][1] != 0 ?  30 : -10;
+                    x = dispShape[0][1] != 0 ?  30 : -10; //check for left or right of center
                     y = 10;
                 }
                 break;
-      
+            // L, J, S, Z and T shapes
             case 3:
-                
+                // check for roation to disp correctly
+                // 0deg
                 if (dispShape[2][0] == 0 && dispShape[2][1] == 0 && dispShape[2][2] == 0) {
                     x = 30;
                     y = 50;
-                
+                // 90deg clockwise
                 } else if (dispShape[0][0] == 0 && dispShape[1][0] == 0 && dispShape[2][0] == 0) {
                     x = 10;
                     y = 30;
-                
+                // 180deg
                 } else if (dispShape[0][0] == 0 && dispShape[0][1] == 0 && dispShape[0][2] == 0) {
                     x = 30;
                     y = 10;
-                
+                // 90deg counterclockwise
                 } else if (dispShape[0][2] == 0 && dispShape[1][2] == 0 && dispShape[2][2] == 0) {
                     x = 50;
                     y = 30;
                 }
                 break;
-            
+            // O shape (no rotations)
             case 2:
                 x = 50;
                 y = 50;
                 break;
         }
 
-        
+        // draw shape
         console.log(x, y)
         console.log(dispShape)
         dispShape.forEach( (row, i) => row.forEach( (tile, j) => {
@@ -174,7 +178,7 @@ class Main {
     }
 }
 
-
+// setup game
 let screen = document.getElementById('grid');
 let nextPiece = document.getElementById('next-piece');
 let heldPiece = document.getElementById('held-piece');
