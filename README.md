@@ -1,26 +1,25 @@
-Controls:
-Arrow Keys for Left, Right, and Down
+## Controls
 
-'Z' and 'X' to Rotate Counterclockwise and Clockwise
+- **Arrow Keys:** Move the piece left, right, and down.
+- **'Z' and 'X' Keys:** Rotate the piece counterclockwise and clockwise, respectively.
+- **'C' Key:** Place the current piece in the hold box.
+- **Up Arrow Key:** Hard Drop - Instantly drop the piece to the bottom.
+- **R Key:** Restart the game.
+- **P Key:** Pause the game.
 
-'C' to place current peice in the hold box
+### Scoring
 
-Up Arrow Key to Hard Drop
+- **Line Clear Points:**
+  - Single Line Clear: 100 points
+  - Double Line Clear: 300 points
+  - Triple Line Clear: 500 points
+  - Tetris (Four Lines Clear): 800 points
 
-Press R to Restart
+### Gameplay Tips
 
-Press P to Pause
+- Gain 1 point for each tile moved down.
+- Move faster by hard dropping the piece (2 points per distance moved).
+- As you clear rows, the game speed increases.
+- Prevent blocks from reaching the top of the board.
 
-One line cleared = 100 points
-
-Two lines cleared = 300 points
-
-Three lines cleared = 500 points
-
-Four lines cleared = 800 points
-
-1 point for each tile moved down
-
-2 points distance moved with hard drop by prushing up arrow game gets faster as you clear rows do not let the blocks touch the top of the board
-
-https://rmcgirt55.github.io/Milestone1/
+### [Play the Game Here](https://rmcgirt55.github.io/Milestone1/)
